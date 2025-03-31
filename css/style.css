@@ -30,7 +30,6 @@ nav div {
 .links {
     gap: 4rem;
     font-size: 2rem;
-    color:rgb(255, 255, 255);
 }
 nav img {
     height: 6rem;
@@ -54,7 +53,8 @@ main {
     box-sizing: border-box;
   }
   body {
-    font-family:'Times New Roman', Times, serif;
+    font-family:"Lilita One", serif;
+    font-weight: lighter;
     background-color: #fef8f8;
   }
   .cards {
@@ -118,12 +118,12 @@ main {
   }
   .card__thumb {
     flex-shrink: 0;
-    width: 50px;
-    height: 50px;      
+    width: 60px;
+    height: 60px;      
     border-radius: 50%;      
   }
   .card__title {
-    font-size: 1em;
+    font-size: 1.3em;
     margin: 0 0 .3em;
     color: #000000;
   }
@@ -146,5 +146,23 @@ main {
   body {
     background-color:rgb(252, 244, 227);
   }
-
 /*--Media Queries--*/
+@media screen and (max-width: 767px) {/*--At screens BELOW 768px, hides nav menu items and displays trigram --*/
+    .topnav a:not(a.logo, a.trigram) {display: none;}
+    .topnav a.trigram {
+      display:inherit;
+      justify-self: end;
+      transform:scale(2.5);
+    }
+  }
+  /*-- Now for the min-width queries --*/
+  @media screen and (min-width: 550px) {
+    main{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media screen and (min-width: 768px) {
+    main{grid-template-columns:repeat(3, 1fr);}
+    aside p {column-count: 2;}
+  }
+  @media screen and (min-width: 1080px) {
+    main{grid-template-columns:repeat(4, 1fr);}
+  }

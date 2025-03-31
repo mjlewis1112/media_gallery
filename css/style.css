@@ -12,12 +12,16 @@ nav, footer {
     padding: 1rem 2rem;
 }
 footer {
-    justify-content: space-evenly;
+    justify-content: center;
     font-weight: lighter;
     font-size: 1.8rem;
 }
 nav div {
     display: flex;
+}
+.logo {
+    align-items: center;
+    gap: 2rem;
 }
 .logo h1 {
     padding-top: 10px;
@@ -25,19 +29,17 @@ nav div {
 }
 .links {
     gap: 4rem;
-    font-size: 1.2rem;
-}
-img {
-    width: 100%;
-    height: auto;
-}
-.links {
-    gap: 4rem;
-    font-size: 1.2em;
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
 }
 nav img {
     height: 6rem;
     width: auto;
+}
+img {
+    width: 100%;
+    align-items: center;
+    height: auto;
 }
 main {
     display: grid;
@@ -136,7 +138,7 @@ main {
     padding: 0 2em 2em;
     margin: 0;
     color: #000000;
-    font-family: "MockFlowFont";   
+    font-family: Arial, Helvetica, sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;

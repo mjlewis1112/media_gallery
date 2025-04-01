@@ -1,19 +1,108 @@
+.slideshow {
+  position: relative;
+  padding: 0;
+}
+.slide {
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.slide img {
+  box-shadow: 0 1px 8px rgba(0,0,0,.5);
+}
+.figcaption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 3%;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px -1px 0px rgb(255, 255, 255),
+               1px -1px 0px rgb(255, 255, 255),
+               -1px 1px 0px rgb(255, 255, 255),
+               1px 1px 0px rgb(255, 255, 255);
+}
+.figcaption h1 {
+  font-size: 7.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+.figcaption p {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+.prev {
+  cursor: pointer;
+  padding: 3rem 3rem;
+  position: absolute;
+  top: 10%;
+  left: 0rem;
+  width: auto; 
+  font-size: 150%;
+  transition: var(--std);
+  border-radius: 0 2rem 2rem 0;
+  user-select: none;
+}
+.next {
+  right: 0rem;
+  border-radius: 2rem 0 0 2rem;
+  cursor: pointer;
+  padding: 3rem 3rem;
+  position: absolute;
+  top: 10%;
+  width: auto;
+  font-size: 150%;
+  transition: var(--std);
+  user-select: none; 
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+button {
+  background: none;
+  border: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+.dot-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  bottom: 3.2rem;
+}
+.dot {
+  background-color: rgba(255,255,255,.6);
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-left: 1.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot:hover {
+  background-color: rgba(255,255,255,1);
+}
+.dot:first-child {
+  margin-left: 0;
+}
 h1 {
-    font-family: "Lilita One", serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: lighter;
 }
 nav, footer {
     background-color:rgb(0, 0, 0);
     color:rgb(255, 255, 255);
     display: flex;
-    font-family: "Lilita One", serif;
+    font-family: 'PT Sans', sans-serif;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
 }
 footer {
     justify-content: center;
-    font-weight: lighter;
     font-size: 1.8rem;
 }
 nav div {
@@ -28,8 +117,10 @@ nav div {
     font-size: 2.8rem;
 }
 .links {
-    gap: 4rem;
-    font-size: 2rem;
+    gap: 2rem;
+    font-size: 1.6rem;
+    position: center;
+    color: #fff;
 }
 nav img {
     height: 6rem;
@@ -53,8 +144,7 @@ main {
     box-sizing: border-box;
   }
   body {
-    font-family:"Lilita One", serif;
-    font-weight: lighter;
+    font-family:'Playfair Display', serif;
     background-color: #fef8f8;
   }
   .cards {
@@ -123,7 +213,7 @@ main {
     border-radius: 50%;      
   }
   .card__title {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 0 0 .3em;
     color: #000000;
   }
@@ -134,28 +224,24 @@ main {
     font-size: .8em; 
     color: #000000;  
   }
+  .card__status {
+    font-size: .9em;
+    color: #e98ebb;
+  }
   .card__description {
     padding: 0 2em 2em;
     margin: 0;
     color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
   body {
-    background-color:rgb(252, 244, 227);
+    background-color:rgb(248, 245, 237);
   }
 /*--Media Queries--*/
-@media screen and (max-width: 767px) {/*--At screens BELOW 768px, hides nav menu items and displays trigram --*/
-    .topnav a:not(a.logo, a.trigram) {display: none;}
-    .topnav a.trigram {
-      display:inherit;
-      justify-self: end;
-      transform:scale(2.5);
-    }
-  }
-  /*-- Now for the min-width queries --*/
+
   @media screen and (min-width: 550px) {
     main{grid-template-columns:repeat(2, 1fr);}
   }

@@ -39,6 +39,7 @@ nav img {
 header {
   align-items: center;
   position: relative;
+
 } /*--Commenting this out to come back to later--*
 .figcaption {
   position: relative;
@@ -61,7 +62,7 @@ header {
   font-size: 3.6rem;
   font-weight: 700;
   margin-top: 1.5rem;
-} /*--Commenting this out to come back to later--*/
+}
 .prev {
   cursor: pointer; 
   padding: 3rem 3rem;
@@ -229,6 +230,9 @@ body {
   }
 
 /*--Media Queries--*/
+@media screen and (max-width: 549px) {
+  main{grid-template-columns:repeat(1, 1fr);}
+}
 @media screen and (min-width: 550px) {
   main{grid-template-columns:repeat(2, 1fr);}
 }

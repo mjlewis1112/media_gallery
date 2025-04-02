@@ -27,10 +27,21 @@ nav div {
   font-size: 2.8rem;
 }
 .links {
+  display: flex;
   gap: 2rem;
   font-size: 1.6rem;
+  font-family: 'PT Sans', sans-serif;
   position: center;
   color: #fff;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+  .links a:hover {
+    color:rgb(242, 203, 203);
+    cursor: pointer;
 }
 nav img {
   height: 6rem;
@@ -39,8 +50,9 @@ nav img {
 header {
   align-items: center;
   position: relative;
+} 
 
-} /*--Commenting this out to come back to later--*
+/*--Commenting this out to come back to later--*
 .figcaption {
   position: relative;
   bottom: 400px;
@@ -118,7 +130,9 @@ button:hover {
 }
 .dot:first-child {
   margin-left: 0;
-} --Commenting this out to come back to later--*/
+} 
+  --Commenting this out to come back to later--*/
+
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
